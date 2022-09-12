@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "aws-sdk": "^2.1214.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

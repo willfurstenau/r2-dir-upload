@@ -1,0 +1,28 @@
+name: 'R2 Directory Upload'
+description: 'Upload a directory to CloudFlare R2'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+inputs:
+  accountid:
+    description: 'R2 Account ID'
+    required: true
+  accesskeyid:
+    description: 'R2 access key ID'
+    required: true
+  secretaccesskey:
+    description: 'R2 access key'
+    required: true
+  bucket:
+    description: 'Bucket Name'
+    required: true
+  source:
+    description: 'Directory path you would like to upload'
+    required: true
+  destination:
+    description: 'R2 end path (defaults to the name of the directory)'
+    required: false
+    default: ""
+runs:
+  using: 'node16'
+  main: 'index.js'
