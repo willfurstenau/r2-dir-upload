@@ -16,7 +16,7 @@ try {
         var s3 = new aws.S3({
                 accessKeyId: accesskeyid,
                 secretAccessKey: secretaccesskey,
-                endpoint: accountid + ".r2.cloudflarestorage.com/" + bucket,
+                endpoint: accountid + ".r2.cloudflarestorage.com/",
         });
 
         function walkSync(currentDirPath, callback) {
