@@ -34,7 +34,7 @@ try {
 
         walkSync(s3Path, function(filePath, stat) {
             let bucketPath = filePath.substring(s3Path.length+1);
-            let params = {Bucket: bucketName, Key: bucketPath, Body: fs.readFileSync(filePath), ContentType: mime.lookup(fileName) };
+            let params = {Bucket: bucketName, Key: bucketPath, Body: fs.readFileSync(filePath), ContentType: mime.getType(filePath) };
             s3.putObject(params, function(err, data) {
                 if (err) {
                     console.log(err)
